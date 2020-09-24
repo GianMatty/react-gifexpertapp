@@ -10,10 +10,11 @@ export const AddCategory = ( { setCategories } ) => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault(); //Hace que no se recarge la pagina 
-        if(inputValue.trim().length > 2){ //Evalua q haya algo en el input
-            setCategories( cats => [ inputValue, ...cats]);
-            setInputValue('');//borra el input
+        e.preventDefault(); 
+        if(inputValue.trim().length > 2){
+            // setCategories( cats => [ inputValue, ...cats]);
+            setCategories( cats => [ inputValue ]);
+            setInputValue('');
         }
     }
 
